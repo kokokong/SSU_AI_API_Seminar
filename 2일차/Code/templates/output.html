@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index</title>
+</head>
+<body>
+<br> {{image_name}}</br>
+    <img src="{{ url_for('send_file', file=file) }}">
+    <div class="flashes">
+      {% for message in get_flashed_messages()%}
+        {{ message|safe }}
+      {% endfor %}
+    </div>
+</body>
+</html>
+
